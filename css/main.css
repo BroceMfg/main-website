@@ -1,0 +1,14 @@
+body {
+  padding-top: 70px;
+}
+
+#logo {
+  padding: 0 1.5em 0 0;
+  max-height: 50px;
+}
+
+.fine-print {
+  padding-left: 2em;
+  font-size: 10pt;
+  cursor: default;
+}

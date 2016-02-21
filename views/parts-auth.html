@@ -1,4 +1,55 @@
 <!-- SHOW SIGNUP PAGE WITH OPTION OF SIGNINING IN IF ALREADY HAVE ACCOUNT -->
 <div class="container-fluid">
-  
-</div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">{{PA.title}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form action="" method="post" ng-show="PA.signinShow">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <button type="submit" class="btn btn-default" name="button">Sign in</button><a class="fine-print" ng-click="PA.showSignup()">Don't have an account? <b>Signup.</b></a>
+      </form>
+      <form action="index.html" method="post" ng-show="PA.signupShow">
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input class="form-control" type="text" name="company" id="company">
+        </div>
+        <div class="form-group">
+          <label for="purchaserName">Purchaser Name</label>
+          <input type="text" class="form-control" name="name" placeholder="Your Name Here">
+        </div>
+        <div class="form-group">
+          <label for="address">Billing Address</label>
+          <textarea class="form-control" name="address" id="address"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input class="form-control" type="number" name="phone" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <div class="form-group">
+          <label for="password">Confirm Password</label>
+          <input type="password" class="form-control" name="confPassword" id="confPassword">
+        </div>
+        <button type="submit" class="btn btn-default" name="button">Sign up</button><a class="fine-print" ng-click="PA.showSignin()">Already have an account? <b>Signin.</b></a>
+      </form>
+
+    </div>
+  </div>
+</div> <!-- end of container-->

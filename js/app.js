@@ -1,1 +1,3 @@
-angular.module('broce', []);
+'use strict';
+
+angular.module('broce', ['ngRoute']);
