@@ -18,36 +18,36 @@
         </div>
         <button type="submit" class="btn btn-default" name="button">Sign in</button><a class="fine-print" ng-click="PA.showSignup()">Don't have an account? <b>Signup.</b></a>
       </form>
-      <form action="index.html" method="post" ng-show="PA.signupShow">
+      <form action="#" method="" ng-show="PA.signupShow">
         <div class="form-group">
           <label for="company">Company Name</label>
-          <input class="form-control" type="text" name="company" id="company">
+          <input class="form-control" type="text" name="company" id="company" ng-model="PA.signupForm.company">
         </div>
         <div class="form-group">
           <label for="purchaserName">Purchaser Name</label>
-          <input type="text" class="form-control" name="name" placeholder="Your Name Here">
+          <input type="text" class="form-control" name="purchaserName" id="purchaserName" ng-model="PA.signupForm.purchaserName" placeholder="Your Name Here">
         </div>
         <div class="form-group">
           <label for="address">Billing Address</label>
-          <textarea class="form-control" name="address" id="address"></textarea>
+          <textarea class="form-control" name="address" id="address" ng-model="PA.signupForm.address"></textarea>
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input class="form-control" type="number" name="phone" id="phone">
+          <input class="form-control" type="number" name="phone" id="phone" ng-model="PA.signupForm.phone">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" id="email">
+          <input type="email" class="form-control" name="email" id="email" ng-model="PA.signupForm.email">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" id="password">
+          <input type="password" class="form-control" name="password" id="password" ng-model="PA.signupForm.password">
         </div>
         <div class="form-group">
           <label for="password">Confirm Password</label>
-          <input type="password" class="form-control" name="confPassword" id="confPassword">
+          <input type="password" class="form-control" name="confPassword" id="confPassword" ng-model="PA.signupForm.confPassword">
         </div>
-        <button type="submit" class="btn btn-default" name="button">Sign up</button><a class="fine-print" ng-click="PA.showSignin()">Already have an account? <b>Signin.</b></a>
+        <button type="button" class="btn btn-default" name="button" ng-click="PA.postSignUp(PA.signupForm)">Sign up</button><a class="fine-print" ng-click="PA.showSignin()">Already have an account? <b>Signin.</b></a>
       </form>
 
     </div>
