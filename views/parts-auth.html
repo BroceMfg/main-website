@@ -7,16 +7,16 @@
   </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <form action="" method="post" ng-show="PA.signinShow">
+      <form action="#" method="" ng-show="PA.signinShow">
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" id="email">
+          <input type="email" class="form-control" name="email" id="email" ng-model="PA.email">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" id="password">
+          <input type="password" class="form-control" name="password" id="password" ng-model="PA.password">
         </div>
-        <button type="submit" class="btn btn-default" name="button">Sign in</button><a class="fine-print" ng-click="PA.showSignup()">Don't have an account? <b>Signup.</b></a>
+        <button type="button" class="btn btn-default" ng-click="PA.postSignIn(PA.email, PA.password)">Sign in</button><a class="fine-print" ng-click="PA.showSignup()">Don't have an account? <b>Signup.</b></a>
       </form>
       <form action="#" method="" ng-show="PA.signupShow">
         <div class="form-group">
@@ -36,12 +36,12 @@
           <input class="form-control" type="number" name="phone" id="phone" ng-model="PA.signupForm.phone">
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" id="email" ng-model="PA.signupForm.email">
+          <label for="newEmail">Email</label>
+          <input type="email" class="form-control" name="email" id="newEmail" ng-model="PA.signupForm.email">
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" id="password" ng-model="PA.signupForm.password">
+          <label for="newPassword">Password</label>
+          <input type="password" class="form-control" name="password" id="newPassword" ng-model="PA.signupForm.password">
         </div>
         <div class="form-group">
           <label for="password">Confirm Password</label>

@@ -34,8 +34,8 @@ function PartsAuthController (PartsAuthService) {
   function postSignUp(signupForm){
     PartsAuthService.postSignUp(signupForm);
   }
-  
-  function postSignIn(email, password){
 
+  function postSignIn(email, password){
+    PartsAuthService.postSignIn(email, password);
   }
 }
