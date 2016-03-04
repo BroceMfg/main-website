@@ -9,6 +9,10 @@ angular.module('broce')
       })
       .when('/parts-order', {
         templateUrl: 'views/parts-auth',
-        controller: 'PartsAuth as PA'
+        controller: 'AuthorizationController as AC'
+      })
+      .when('/new-order', {
+        templateUrl: 'views/user/newOrder.html',
+        controller: 'OrderFormController as OFC'
       });
   });

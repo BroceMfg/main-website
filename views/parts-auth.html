@@ -2,52 +2,52 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="text-center">{{PA.title}}</h2>
+      <h2 class="text-center">{{AC.title}}</h2>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <form action="#" method="" ng-show="PA.signinShow">
+      <form action="#" method="" ng-show="AC.signinShow">
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" id="email" ng-model="PA.email">
+          <input type="email" class="form-control" name="email" id="email" ng-model="AC.email">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" id="password" ng-model="PA.password">
+          <input type="password" class="form-control" name="password" id="password" ng-model="AC.password">
         </div>
-        <button type="button" class="btn btn-default" ng-click="PA.postSignIn(PA.email, PA.password)">Sign in</button><a class="fine-print" ng-click="PA.showSignup()">Don't have an account? <b>Signup.</b></a>
+        <button type="button" class="btn btn-default" ng-click="AC.postSignIn(AC.email, AC.password)">Sign in</button><a class="fine-print" ng-click="AC.showSignup()">Don't have an account? <b>Signup.</b></a>
       </form>
-      <form action="#" method="" ng-show="PA.signupShow">
+      <form action="#" method="" ng-show="AC.signupShow">
         <div class="form-group">
           <label for="company">Company Name</label>
-          <input class="form-control" type="text" name="company" id="company" ng-model="PA.signupForm.company">
+          <input class="form-control" type="text" name="company" id="company" ng-model="AC.signupForm.company">
         </div>
         <div class="form-group">
           <label for="purchaserName">Purchaser Name</label>
-          <input type="text" class="form-control" name="purchaserName" id="purchaserName" ng-model="PA.signupForm.purchaserName" placeholder="Your Name Here">
+          <input type="text" class="form-control" name="purchaserName" id="purchaserName" ng-model="AC.signupForm.purchaserName" placeholder="Your Name Here">
         </div>
         <div class="form-group">
           <label for="address">Billing Address</label>
-          <textarea class="form-control" name="address" id="address" ng-model="PA.signupForm.address"></textarea>
+          <textarea class="form-control" name="address" id="address" ng-model="AC.signupForm.address"></textarea>
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input class="form-control" type="number" name="phone" id="phone" ng-model="PA.signupForm.phone">
+          <input class="form-control" type="number" name="phone" id="phone" ng-model="AC.signupForm.phone">
         </div>
         <div class="form-group">
           <label for="newEmail">Email</label>
-          <input type="email" class="form-control" name="email" id="newEmail" ng-model="PA.signupForm.email">
+          <input type="email" class="form-control" name="email" id="newEmail" ng-model="AC.signupForm.email">
         </div>
         <div class="form-group">
           <label for="newPassword">Password</label>
-          <input type="password" class="form-control" name="password" id="newPassword" ng-model="PA.signupForm.password">
+          <input type="password" class="form-control" name="password" id="newPassword" ng-model="AC.signupForm.password">
         </div>
         <div class="form-group">
           <label for="password">Confirm Password</label>
-          <input type="password" class="form-control" name="confPassword" id="confPassword" ng-model="PA.signupForm.confPassword">
+          <input type="password" class="form-control" name="confPassword" id="confPassword" ng-model="AC.signupForm.confPassword">
         </div>
-        <button type="button" class="btn btn-default" name="button" ng-click="PA.postSignUp(PA.signupForm)">Sign up</button><a class="fine-print" ng-click="PA.showSignin()">Already have an account? <b>Signin.</b></a>
+        <button type="button" class="btn btn-default" name="button" ng-click="AC.postSignUp(AC.signupForm)">Sign up</button><a class="fine-print" ng-click="AC.showSignin()">Already have an account? <b>Signin.</b></a>
       </form>
 
     </div>

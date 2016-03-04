@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-2">
+      <form action="#" method="" ng-show="OFC.showOrder">
+        <div class="form-group">
+          <label for="poNumber">Purchase Order Number</label>
+          <input class="form-control" type="text" name="poNumber" id="poNumber" ng-model="OFC.poNumber">
+        </div>
+        <div class="form-group">
+          <label for="purchaserName">Purchaser Name</label>
+          <input type="text" class="form-control" name="purchaserName" id="purchaserName" ng-model="OFC.signupForm.purchaserName" placeholder="Your Name Here">
+        </div>
+        <div class="form-group">
+          <label for="address">Billing Address</label>
+          <textarea class="form-control" name="address" id="address" ng-model="OFC.signupForm.address"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input class="form-control" type="number" name="phone" id="phone" ng-model="OFC.signupForm.phone">
+        </div>
+        <div class="form-group">
+          <label for="newEmail">Email</label>
+          <input type="email" class="form-control" name="email" id="newEmail" ng-model="OFC.signupForm.email">
+        </div>
+        <button type="button" class="btn btn-default" name="button" ng-click="OFC.postSignUp(OFC.signupForm)">Sign up</button><a class="fine-print" ng-click="OFC.showSignin()">Already have an account? <b>Signin.</b></a>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <h2>Your Order: {{OFC.orderForm.poNumber}}</h2>
+      <div class="" ng-repeat="machine in OFC.orderForm.orderInfo">
+        <h3>Machine Serial Number: {{machine.machineSerial}}</h3>
+        <table>
+          <thead>
+            <th>
+              Part Number
+            </th>
+            <th>
+              Quantity
+            </th>
+          </thead>
+          <tr>
+            <td>
+              {{machine.parts[0].partNumber}}
+            </td>
+            <td>
+              {{machine.parts[0].quantity}}
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
