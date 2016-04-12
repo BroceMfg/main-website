@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('broce')
-  .controller('AuthorizationController', ['PartsAuthService', AuthorizationController]);
+  .controller('AuthorizationController', ['AuthService', AuthorizationController]);
 
 
-  function AuthorizationController (PartsAuthService) {
+  function AuthorizationController (AuthService) {
     var vm = this;
     vm.title = 'Sign in here to order parts for your Broce Broom';
     vm.signinShow = true;
@@ -26,10 +26,10 @@ angular.module('broce')
     }
 
     function postSignUp(signupForm){
-      PartsAuthService.postSignUp(signupForm);
+      AuthService.postSignUp(signupForm);
     }
 
     function postSignIn(email, password){
-      PartsAuthService.postSignIn(email, password);
+      AuthService.postSignIn(email, password);
     }
   }
