@@ -7,10 +7,13 @@ angular.module('broce')
   function AuthorizationController (AuthService) {
     var vm = this;
     vm.title = 'Sign in here to order parts for your Broce Broom';
+    // initially only show signin form, hide signup form - these are based on ng-show attributes
     vm.signinShow = true;
     vm.signupShow = false;
+    // this functions control which form is showed and which is hidden
     vm.showSignup = showSignup;
     vm.showSignin = showSignin;
+    // to submit each of these forms they both have functions too
     vm.postSignUp = postSignUp;
     vm.postSignIn = postSignIn;
 
